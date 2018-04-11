@@ -3,7 +3,7 @@
 //
 module.exports = function item(options) {
     var seneca = this;
-    
+
     //
     //define an action pattern to add an item to the mongo store
     seneca.add('role:item, cmd:add', function add(msg, respond) {
@@ -12,7 +12,7 @@ module.exports = function item(options) {
         //populate the data fields
         items.id = msg.id;
         items.name = msg.name;
-        
+
         items.price = msg.price;
         items.description = msg.description;
         //save the record
@@ -26,7 +26,13 @@ module.exports = function item(options) {
         var items = seneca.make("items");
         items.list$({}, respond);
     });
-    //
+    //define an action pattern to remove an item by name
+    seneca.add('role:item, cmd:remove', function remove(msg, respond) {
+        console.log('in remove action');
+        var items = seneca.make("items");
+        console.log('msg.id ' + msg.id);
+        items.remove$(msg.id, respond);
+    });
 
-    
+
 };

@@ -2,7 +2,7 @@
 module.exports = function data_api(options) {
     var seneca = this;
     //action names
-    var valid_ops = { add: 'add', fetch: 'fetch' }
+    var valid_ops = { add: 'add', fetch: 'fetch', remove: 'remove' }
     //define the action
     seneca.add('role:data_api,path:accesstype', function (msg, respond) {
         //query the request to extract the values of fields for an item
