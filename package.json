@@ -1,0 +1,28 @@
+{
+  "name": "lab4emergingtech",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "i:ronaldo": "cd AshleyTjon-HingLab4 && npm i",
+    "i:ashley": "cd RonaldoFelipeLab4 && npm i",
+    "postinstall": "concurrently \"npm run i:ashley\" \"npm run i:ronaldo\"",
+    "ronaldo": "cd AshleyTjon-HingLab4 && npm start",
+    "ashley": "cd RonaldoFelipeLab4 && npm start",
+    "start": "concurrently \"npm run ashley\" \"npm run ronaldo\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronaldo127/Lab4EmergingTech.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronaldo127/Lab4EmergingTech/issues"
+  },
+  "homepage": "https://github.com/ronaldo127/Lab4EmergingTech#readme",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
