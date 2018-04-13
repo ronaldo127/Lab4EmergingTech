@@ -6,15 +6,17 @@
 
 # Installing and running mongo
 
-- docker run -it -d --network=host mongo mongod
-
+```bash
+docker run -it -d --network=host mongo mongod
+```
 # Test mongo connection
-
-- docker run -it --network=host --rm mongo mongo
-
+```bash
+docker run -it --network=host --rm mongo mongo
+```
 # Install and Run the project
-
-- docker run -it --network=host --rm -v /your/local/folder/:/app centos-microservices:1.0 /bin/bash
-- cd app/
-- npm i
-- npm start
+```bash
+docker run -it --network=host --rm -v /your/local/folder/:/app centos-microservices:1.0 /bin/bash
+cd app/
+npm i
+npm start
+```
