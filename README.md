@@ -7,7 +7,7 @@
 # Installing and running mongo
 
 ```bash
-docker run -it -d --network=host mongo mongod
+docker run -it -d -p 27017:27017 mongo mongod
 ```
 # Test mongo connection
 ```bash
